@@ -4,26 +4,17 @@
 	<title>My Django Girls Blog</title>
 </head>
 <body>
-	<h1>Hey there!</h1>
-	<p>Welcome to this blog!</p>
+<div>
+    <h1><a href="/">Django Girls Blog</a></h1>
+</div>
 
-	<h2>I'm nobody's taxi service; I'm not gonna be there to catch you every time you feel like jumping out of a spaceship.</h2>
-
-	<p>Heh-haa! Super squeaky bum time! It's art! A statement on modern society, 'Oh Ain't Modern Society Awful?'! *Insistently* Bow ties are cool! Come on Amy, I'm a normal bloke, tell me what normal blokes do!</p>
-
-	<p>You know when grown-ups tell you 'everything's going to be fine' and you think they're probably lying to make you feel better? I hate yogurt. It's just stuff with bits in. Annihilate? No. No violence. I won't stand for it. Not now, not ever, do you understand me?! I'm the Doctor, the Oncoming Storm - and you basically meant beat them in a football match, didn't you?</p>
-
-	<h2>Did I mention we have comfy chairs?</h2>
-
-	<p>Did I mention we have comfy chairs? Heh-haa! Super squeaky bum time! I am the Doctor, and you are the Daleks! I am the last of my species, and I know how that weighs on the heart so don't lie to me! Aw, you're all Mr. Grumpy Face today.</p>
-
-	<p>Stop talking, brain thinking. Hush. Aw, you're all Mr. Grumpy Face today. Sorry, checking all the water in this area; there's an escaped fish. The way I see it, every life is a pile of good things and bad things.…hey.…the good things don't always soften the bad things; but vice-versa the bad things don't necessarily spoil the good things and make them unimportant.</p>
-
-	<h2>Stop talking, brain thinking. Hush.</h2>
-
-	<p>They're not aliens, they're Earth…liens! Stop talking, brain thinking. Hush. Saving the world with meals on wheels. *Insistently* Bow ties are cool! Come on Amy, I'm a normal bloke, tell me what normal blokes do!</p>
-
-	<p>You've swallowed a planet! I am the Doctor, and you are the Daleks! It's art! A statement on modern society, 'Oh Ain't Modern Society Awful?'! You know when grown-ups tell you 'everything's going to be fine' and you think they're probably lying to make you feel better?</p>
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
 
 </body>
 </html>
